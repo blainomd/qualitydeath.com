@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quality Death — Die Well. On Your Terms.</title>
-  <meta name="description" content="75% of Americans want to die at home. Only 30% do. The gap isn't medical — it's a conversation that never happened. Quality Death helps you have it.">
+  <title>Quality Death &mdash; An integral end-of-life companion</title>
+  <meta name="description" content="A virtual death doula that holds the full arc of dying well &mdash; values, family, legacy, and, where clinically appropriate, psychedelic-assisted care for existential anxiety. Evidence-based. Colorado-native.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -19,6 +19,9 @@
       --green-deeper: #1a2a15;
       --green-light: #c6eeb5;
       --green-mid: #aad19b;
+      --amethyst: #6b4a7a;      /* psychedelic-integration accent */
+      --amethyst-soft: #e9dff0;
+      --amber: #b87333;
       --cream: #fcf9f8;
       --warm-white: #f6f3f2;
       --text: #1c1b1b;
@@ -42,54 +45,32 @@
 
     /* NAV */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: var(--green-deeper);
       border-bottom: 1px solid rgba(198,238,181,0.12);
       padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       height: 56px;
     }
-
     .nav-brand {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--green-light);
-      letter-spacing: -0.01em;
-      text-decoration: none;
+      font-size: 15px; font-weight: 700; color: var(--green-light);
+      letter-spacing: -0.01em; text-decoration: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
-      font-size: 13px;
-      font-weight: 500;
-      color: rgba(198,238,181,0.75);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.15s;
+      font-size: 13px; font-weight: 500;
+      color: rgba(198,238,181,0.75); text-decoration: none;
+      letter-spacing: 0.02em; transition: color 0.15s;
     }
-
     .nav-links a:hover { color: var(--green-light); }
-
     .nav-cta {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 13px; font-weight: 600;
       color: var(--green-deeper) !important;
       background: var(--green-light);
-      padding: 6px 16px;
-      border-radius: 100px;
+      padding: 6px 16px; border-radius: 100px;
       text-decoration: none !important;
       transition: background 0.15s;
     }
-
     .nav-cta:hover { background: var(--green-mid) !important; }
 
     /* HERO */
@@ -97,589 +78,384 @@
       background: var(--green-deeper);
       background-image:
         radial-gradient(ellipse at 20% 50%, rgba(67,100,56,0.4) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(45,68,36,0.5) 0%, transparent 50%);
+        radial-gradient(ellipse at 80% 20%, rgba(107,74,122,0.35) 0%, transparent 55%);
       padding: 96px 24px 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      text-align: center; position: relative; overflow: hidden;
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23436438' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.4;
-      pointer-events: none;
-    }
-
-    .hero-inner { max-width: 720px; margin: 0 auto; position: relative; }
-
+    .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
     .hero-eyebrow {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      display: inline-block; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--green-mid);
       border: 1px solid rgba(170,209,155,0.3);
-      padding: 5px 14px;
-      border-radius: 100px;
-      margin-bottom: 28px;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
     }
-
     .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
+      font-weight: 500;
+      color: #fff; line-height: 1.1;
+      letter-spacing: -0.03em; margin-bottom: 24px;
     }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--green-light);
-    }
-
+    .hero h1 em { font-style: italic; color: var(--green-light); font-weight: 500; }
     .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: rgba(255,255,255,0.72);
-      max-width: 560px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
+      font-size: clamp(1rem, 2.3vw, 1.2rem);
+      color: rgba(255,255,255,0.78);
+      max-width: 620px; margin: 0 auto 40px;
+      line-height: 1.65;
     }
-
     .hero-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
     }
-
     .btn-primary {
-      display: inline-block;
-      background: var(--green);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 14px 36px;
-      border-radius: 100px;
-      text-decoration: none;
+      display: inline-block; background: var(--green); color: #fff;
+      font-size: 16px; font-weight: 600;
+      padding: 14px 36px; border-radius: 100px; text-decoration: none;
       letter-spacing: -0.01em;
       transition: background 0.15s, transform 0.1s;
       box-shadow: 0 4px 20px rgba(67,100,56,0.4);
     }
-
     .btn-primary:hover { background: #5b7e4e; transform: translateY(-1px); }
-
     .hero-disclaimer {
-      font-size: 12px;
-      color: rgba(255,255,255,0.45);
+      font-size: 12px; color: rgba(255,255,255,0.48);
       letter-spacing: 0.02em;
     }
 
     /* STATS SECTION */
-    .stats-section {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 56px 24px;
-    }
-
-    .stats-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .stats-lead {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 48px;
-    }
-
+    .stats-section { background: #fff; border-bottom: 1px solid var(--border); padding: 56px 24px; }
+    .stats-inner { max-width: 960px; margin: 0 auto; }
+    .stats-lead { text-align: center; max-width: 640px; margin: 0 auto 48px; }
     .stats-lead h2 {
-      font-size: clamp(1.3rem, 3vw, 1.75rem);
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      line-height: 1.3;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.5rem, 3.2vw, 2rem);
+      font-weight: 500;
+      color: var(--text); letter-spacing: -0.02em;
+      margin-bottom: 16px; line-height: 1.3;
     }
-
-    .stats-lead p {
-      font-size: 15px;
-      color: var(--text-mid);
-    }
-
+    .stats-lead p { font-size: 15px; color: var(--text-mid); }
     .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
     }
-
-    .stat-card {
-      background: #fff;
-      padding: 36px 28px;
-      text-align: center;
-    }
-
+    .stat-card { background: #fff; padding: 36px 28px; text-align: center; }
     .stat-number {
-      font-size: 2.75rem;
-      font-weight: 800;
-      color: var(--green);
-      letter-spacing: -0.04em;
-      line-height: 1;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.75rem; font-weight: 600;
+      color: var(--green); letter-spacing: -0.03em; line-height: 1;
       margin-bottom: 10px;
     }
+    .stat-label { font-size: 14px; font-weight: 500; color: var(--text-mid); line-height: 1.45; }
 
-    .stat-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-mid);
-      line-height: 1.4;
-    }
-
-    /* APP SCREENS */
-    .screens-section {
-      padding: 80px 24px;
-      background: var(--warm-white);
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 56px;
-    }
-
+    /* INTEGRAL SECTION */
+    .integral-section { padding: 80px 24px; background: var(--warm-white); border-bottom: 1px solid var(--border); }
+    .section-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
     .section-eyebrow {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 14px;
+      display: inline-block; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 14px;
     }
-
     .section-header h2 {
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.025em;
-      line-height: 1.2;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 500;
+      color: var(--text); letter-spacing: -0.025em; line-height: 1.2;
       margin-bottom: 16px;
     }
-
-    .section-header p {
-      font-size: 15px;
-      color: var(--text-mid);
+    .section-header p { font-size: 16px; color: var(--text-mid); line-height: 1.6; }
+    .integral-grid {
+      max-width: 1020px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
     }
+    .integral-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px 28px 24px;
+    }
+    .integral-card .tag {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 100px; margin-bottom: 14px;
+    }
+    .tag.mind { background: rgba(67,100,56,0.1); color: var(--green); }
+    .tag.body { background: rgba(184,115,51,0.12); color: var(--amber); }
+    .tag.relations { background: rgba(67,100,56,0.08); color: var(--green-dark); }
+    .tag.spirit { background: rgba(107,74,122,0.12); color: var(--amethyst); }
+    .integral-card h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 20px; font-weight: 600;
+      color: var(--text); letter-spacing: -0.01em; margin-bottom: 10px;
+    }
+    .integral-card p { font-size: 14.5px; color: var(--text-mid); line-height: 1.65; }
 
-    /* Screen Tabs */
+    /* APP / DOULA PREVIEW */
+    .screens-section { padding: 80px 24px; background: #fff; }
     .screen-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 40px;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 8px; margin-bottom: 40px;
     }
-
     .tab-btn {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-light);
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 7px 16px;
-      border-radius: 100px;
-      cursor: pointer;
-      transition: all 0.15s;
-      letter-spacing: 0.01em;
+      font-size: 12.5px; font-weight: 500; color: var(--text-light);
+      background: #fff; border: 1px solid var(--border);
+      padding: 7px 16px; border-radius: 100px;
+      cursor: pointer; transition: all 0.15s; letter-spacing: 0.01em;
+      font-family: inherit;
     }
+    .tab-btn:hover { border-color: var(--green); color: var(--green); }
+    .tab-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
 
-    .tab-btn:hover {
-      border-color: var(--green);
-      color: var(--green);
-    }
-
-    .tab-btn.active {
-      background: var(--green);
-      border-color: var(--green);
-      color: #fff;
-    }
-
-    /* Phone Frame */
-    .phone-showcase {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 32px;
-    }
-
-    .phone-frame-wrap {
-      position: relative;
-      flex-shrink: 0;
-    }
-
+    .phone-showcase { display: flex; justify-content: center; align-items: flex-start; }
+    .phone-frame-wrap { position: relative; flex-shrink: 0; }
     .phone-frame {
-      width: 320px;
-      height: 640px;
-      border: 8px solid var(--green-dark);
-      border-radius: 40px;
-      overflow: hidden;
-      background: #fff;
+      width: 340px; height: 680px;
+      border: 8px solid var(--green-dark); border-radius: 40px;
+      overflow: hidden; background: var(--cream);
       box-shadow:
         0 0 0 1px rgba(67,100,56,0.25),
         0 24px 60px var(--shadow),
         0 8px 20px rgba(0,0,0,0.12);
       position: relative;
     }
-
     .phone-notch {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 26px;
-      background: var(--green-dark);
-      border-radius: 0 0 16px 16px;
-      z-index: 10;
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 100px; height: 26px; background: var(--green-dark);
+      border-radius: 0 0 16px 16px; z-index: 10;
     }
-
-    .phone-frame iframe {
-      width: 390px;
-      height: 780px;
-      border: none;
-      transform: scale(0.8205);
-      transform-origin: top left;
-      pointer-events: none;
+    .phone-screen {
+      width: 100%; height: 100%; padding: 40px 18px 20px;
+      display: flex; flex-direction: column; gap: 10px;
+      overflow-y: auto; scroll-behavior: smooth;
     }
-
+    .phone-screen::-webkit-scrollbar { width: 0; }
+    .phone-screen .ctx {
+      font-size: 11px; color: var(--text-light); text-transform: uppercase;
+      letter-spacing: 0.08em; text-align: center; margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .bubble {
+      max-width: 84%; padding: 11px 14px;
+      border-radius: 16px; font-size: 13.5px; line-height: 1.5;
+      word-wrap: break-word;
+    }
+    .bubble.sage {
+      background: #fff; border: 1px solid var(--border);
+      align-self: flex-start; border-bottom-left-radius: 4px;
+      color: var(--text);
+    }
+    .bubble.user {
+      background: var(--green); color: #fff;
+      align-self: flex-end; border-bottom-right-radius: 4px;
+    }
+    .bubble.sage em { color: var(--amethyst); font-style: italic; }
     .screen-caption {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-mid);
-      letter-spacing: 0.02em;
+      text-align: center; margin-top: 20px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 17px; font-weight: 500;
+      color: var(--text-mid); letter-spacing: -0.01em;
     }
+
+    /* PSYCHEDELIC SECTION */
+    .psych-section {
+      padding: 88px 24px;
+      background: linear-gradient(180deg, var(--warm-white) 0%, #efe5f5 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .psych-inner { max-width: 960px; margin: 0 auto; }
+    .psych-header { text-align: center; margin-bottom: 48px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .psych-header .section-eyebrow { color: var(--amethyst); }
+    .psych-header h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 500;
+      color: var(--text); letter-spacing: -0.025em; line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .psych-header p { font-size: 16px; color: var(--text-mid); line-height: 1.65; }
+    .evidence-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .evidence-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      padding: 24px 24px 22px;
+    }
+    .evidence-card .src {
+      font-size: 11px; font-weight: 700; color: var(--amethyst);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .evidence-card .stat-num {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.2rem; font-weight: 600;
+      color: var(--amethyst); letter-spacing: -0.03em; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .evidence-card h3 {
+      font-size: 15px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .evidence-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.6; }
+    .evidence-card .cite {
+      font-size: 11.5px; color: var(--text-light); margin-top: 12px; font-style: italic;
+    }
+    .co-block {
+      background: #fff; border: 1px solid var(--amethyst); border-left: 4px solid var(--amethyst);
+      border-radius: 12px; padding: 28px; margin-top: 32px;
+    }
+    .co-block h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 22px; font-weight: 600;
+      color: var(--text); letter-spacing: -0.01em; margin-bottom: 10px;
+    }
+    .co-block p { font-size: 14.5px; color: var(--text-mid); line-height: 1.65; margin-bottom: 8px; }
+    .co-block p:last-child { margin-bottom: 0; }
+    .disclaimer {
+      margin-top: 24px; padding: 16px 20px; background: #fff;
+      border: 1px dashed var(--amethyst); border-radius: 10px;
+      font-size: 12.5px; color: var(--text-mid); line-height: 1.6;
+    }
+    .disclaimer strong { color: var(--amethyst); }
 
     /* FEATURES */
-    .features-section {
-      padding: 80px 24px;
-      background: #fff;
-    }
-
+    .features-section { padding: 80px 24px; background: #fff; }
     .features-grid {
-      max-width: 960px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-top: 48px;
+      max-width: 1020px; margin: 48px auto 0;
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
     }
-
-    .feature-card {
-      background: #fff;
-      padding: 36px 32px;
-    }
-
+    .feature-card { background: #fff; padding: 32px 28px; }
     .feature-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(67,100,56,0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
+      width: 44px; height: 44px; background: rgba(67,100,56,0.1);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
     }
-
-    .feature-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: var(--green);
-    }
-
+    .feature-icon svg { width: 22px; height: 22px; fill: var(--green); }
     .feature-card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 18px; font-weight: 600; color: var(--text);
+      margin-bottom: 10px; letter-spacing: -0.01em;
     }
-
-    .feature-card p {
-      font-size: 14px;
-      color: var(--text-mid);
-      line-height: 1.65;
-    }
+    .feature-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
 
     /* HARD TRUTHS */
-    .truths-section {
-      padding: 80px 24px;
-      background: var(--green-deeper);
-    }
-
-    .truths-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .truths-section .section-eyebrow {
-      color: var(--green-mid);
-    }
-
+    .truths-section { padding: 80px 24px; background: var(--green-deeper); }
+    .truths-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .truths-section .section-eyebrow { color: var(--green-mid); }
     .truths-section h2 {
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 500;
+      color: #fff; letter-spacing: -0.025em; line-height: 1.2;
       margin-bottom: 32px;
     }
-
-    .truths-section h2 em {
-      font-style: normal;
-      color: var(--green-light);
-    }
-
+    .truths-section h2 em { font-style: italic; color: var(--green-light); }
     .truth-block {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(198,238,181,0.15);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-bottom: 16px;
-      text-align: left;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(198,238,181,0.15);
+      border-radius: 12px; padding: 26px 30px; margin-bottom: 14px; text-align: left;
     }
-
-    .truth-block p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.82);
-      line-height: 1.7;
-    }
-
-    .truth-block strong {
-      color: var(--green-light);
-      font-weight: 600;
-    }
+    .truth-block p { font-size: 15.5px; color: rgba(255,255,255,0.85); line-height: 1.7; }
+    .truth-block strong { color: var(--green-light); font-weight: 600; }
 
     /* CONNECT SECTION */
     .connect-section {
-      padding: 72px 24px;
-      background: var(--warm-white);
+      padding: 72px 24px; background: var(--warm-white);
       border-top: 1px solid var(--border);
     }
-
     .connect-inner {
-      max-width: 800px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 48px;
+      max-width: 1080px; margin: 48px auto 0;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
     }
-
+    .connect-group-label {
+      max-width: 1080px; margin: 32px auto 12px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-light);
+    }
+    .connect-group-label:first-of-type { margin-top: 48px; }
+    .connect-card.sh-room { border-left: 3px solid var(--amber); }
+    .connect-card.mapofyou { border-left: 3px solid var(--amethyst); }
+    .connect-card.psych { border-left: 3px solid var(--amethyst); }
+    .connect-card.coop { border-left: 3px solid var(--green); }
+    .connect-card.goals { border-left: 3px solid var(--green); }
+    .connect-card.comfort { border-left: 3px solid var(--green); }
     .connect-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      padding: 28px;
     }
-
     .connect-card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 10px;
+      font-size: 15.5px; font-weight: 700; color: var(--text);
+      margin-bottom: 10px; letter-spacing: -0.01em;
     }
-
-    .connect-card p {
-      font-size: 14px;
-      color: var(--text-mid);
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-
+    .connect-card p { font-size: 13.5px; color: var(--text-mid); margin-bottom: 16px; line-height: 1.6; }
     .btn-outline {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--green);
-      border: 1.5px solid var(--green);
-      padding: 8px 20px;
-      border-radius: 100px;
-      text-decoration: none;
+      display: inline-block; font-size: 12.5px; font-weight: 600;
+      color: var(--green); border: 1.5px solid var(--green);
+      padding: 7px 18px; border-radius: 100px; text-decoration: none;
       transition: all 0.15s;
     }
+    .btn-outline:hover { background: var(--green); color: #fff; }
 
-    .btn-outline:hover {
-      background: var(--green);
-      color: #fff;
-    }
-
-    /* SAGE PERSISTENT BAR qualitydeath */
+    /* SAGE BAR */
     .sage-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
       background: var(--green-deeper);
       border-top: 1px solid rgba(198,238,181,0.2);
       box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
     }
-
     .sage-bar-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      max-width: 960px; margin: 0 auto;
+      padding: 10px 16px; display: flex; align-items: center; gap: 10px;
     }
-
     .sage-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--green-mid);
-      border-radius: 50%;
-      flex-shrink: 0;
+      width: 8px; height: 8px; background: var(--green-mid);
+      border-radius: 50%; flex-shrink: 0;
       animation: pulse 2.4s ease-in-out infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(0.85); }
     }
-
     .sage-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--green-mid);
-      white-space: nowrap;
-      letter-spacing: 0.02em;
+      font-size: 12px; font-weight: 600; color: var(--green-mid);
+      white-space: nowrap; letter-spacing: 0.02em;
     }
-
     .sage-input {
-      flex: 1;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(198,238,181,0.2);
-      border-radius: 100px;
-      padding: 9px 18px;
-      font-size: 14px;
-      font-family: 'Inter', sans-serif;
-      color: #fff;
-      outline: none;
+      flex: 1; background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(198,238,181,0.2); border-radius: 100px;
+      padding: 9px 18px; font-size: 14px; font-family: inherit;
+      color: #fff; outline: none;
       transition: border-color 0.15s, background 0.15s;
     }
-
-    .sage-input::placeholder { color: rgba(255,255,255,0.4); }
+    .sage-input::placeholder { color: rgba(255,255,255,0.42); }
     .sage-input:focus {
       border-color: rgba(198,238,181,0.5);
       background: rgba(255,255,255,0.12);
     }
-
     .sage-send {
-      flex-shrink: 0;
-      background: var(--green);
-      border: none;
-      border-radius: 100px;
-      padding: 9px 18px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.15s;
-      font-family: 'Inter', sans-serif;
+      flex-shrink: 0; background: var(--green); border: none;
+      border-radius: 100px; padding: 9px 18px;
+      font-size: 13px; font-weight: 600; color: #fff;
+      cursor: pointer; transition: background 0.15s; font-family: inherit;
     }
-
     .sage-send:hover { background: #5b7e4e; }
     .sage-send:disabled { opacity: 0.5; cursor: not-allowed; }
-
     .sage-response-bar {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 16px 10px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.5;
-      min-height: 0;
-      transition: all 0.2s;
+      max-width: 960px; margin: 0 auto;
+      padding: 0 16px 10px; font-size: 13px; color: rgba(255,255,255,0.78);
+      line-height: 1.5; min-height: 0; transition: all 0.2s;
     }
-
     .sage-response-bar.visible { min-height: 32px; }
-
-    /* FOOTER */
-    footer {
-      background: var(--green-deeper);
-      padding: 40px 24px;
-      border-top: 1px solid rgba(198,238,181,0.12);
-      margin-bottom: 0;
-    }
-
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--green-light);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-      color: rgba(198,238,181,0.6);
-      text-decoration: none;
-    }
-
-    .footer-links a:hover { color: var(--green-light); }
-
-    .footer-note {
-      font-size: 12px;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
-      margin-top: 20px;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .stats-grid { grid-template-columns: 1fr; }
       .stat-card { padding: 24px; }
+      .integral-grid { grid-template-columns: 1fr; }
       .features-grid { grid-template-columns: 1fr; }
       .connect-inner { grid-template-columns: 1fr; }
-      .phone-frame { width: 280px; height: 560px; }
-      .phone-frame iframe { transform: scale(0.718); }
+      .phone-frame { width: 300px; height: 600px; }
+      .evidence-grid { grid-template-columns: 1fr; }
       .sage-label { display: none; }
-      .footer-inner { flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
     }
   </style>
 </head>
@@ -689,26 +465,25 @@
   <nav>
     <a href="/" class="nav-brand">Quality Death</a>
     <ul class="nav-links">
-      <li><a href="#app">The App</a></li>
-      <li><a href="#features">How It Works</a></li>
-      <li><a href="#truths">Why It Matters</a></li>
-      <li><a href="#connect">Connected Care</a></li>
+      <li><a href="#integral">Integral</a></li>
+      <li><a href="#doula">The Doula</a></li>
+      <li><a href="#psychedelic">Psychedelic Care</a></li>
+      <li><a href="#connect">Connected</a></li>
     </ul>
-    <a href="#sage-input" class="nav-cta" data-prime="I'd like to start thinking about my advance care plan. Where do we begin?">Start the Conversation</a>
+    <a href="#sage-input" class="nav-cta" data-prime="I'd like to start thinking about the full arc of dying well. Where do we begin?">Start the conversation</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-eyebrow">Advance Care Planning, Powered by Sage AI</span>
-      <h1>You deserve a <em>good death.</em></h1>
+      <span class="hero-eyebrow">An integral end-of-life companion</span>
+      <h1>Reed is with you &mdash; for the conversations, the fears, <em>and the ceremonies.</em></h1>
       <p class="hero-sub">
-        Quality Death helps you define what that means — for yourself, on your own terms —
-        before someone else decides for you.
+        A virtual death doula that holds the full arc of dying well &mdash; values, family, legacy &mdash; and, where clinically appropriate and lawfully available, psychedelic-assisted care for existential anxiety.
       </p>
       <div class="hero-actions">
-        <a href="#sage-input" class="btn-primary" data-prime="I'd like to start thinking about my advance care plan. Where do we begin?">Start the conversation</a>
-        <span class="hero-disclaimer">Advance care planning &nbsp;·&nbsp; Values clarification &nbsp;·&nbsp; Powered by Sage AI</span>
+        <a href="#sage-input" class="btn-primary" data-prime="I'd like to start thinking about the full arc of dying well. Where do we begin?">Start the conversation</a>
+        <span class="hero-disclaimer">Values &middot; Family &middot; Legacy &middot; Ceremony &middot; Evidence-based integration</span>
       </div>
     </div>
   </section>
@@ -717,8 +492,8 @@
   <section class="stats-section">
     <div class="stats-inner">
       <div class="stats-lead">
-        <h2>75% of Americans say they want to die at home. Only 30% do.</h2>
-        <p>The gap isn't medical. It's a conversation that never happened.</p>
+        <h2>75% of Americans want to die at home. Only 30% do.</h2>
+        <p>The gap isn't medical. It's a conversation that never happened &mdash; and a layer of care that was missing.</p>
       </div>
       <div class="stats-grid">
         <div class="stat-card">
@@ -727,7 +502,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-number">30%</div>
-          <div class="stat-label">actually do — a gap driven by silence, not medicine</div>
+          <div class="stat-label">actually do &mdash; a gap of silence, not medicine</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">90%</div>
@@ -737,88 +512,170 @@
     </div>
   </section>
 
-  <!-- APP SCREENS -->
-  <section class="screens-section" id="app">
+  <!-- INTEGRAL -->
+  <section class="integral-section" id="integral">
     <div class="section-header">
-      <span class="section-eyebrow">The App</span>
-      <h2>Every conversation, beautifully guided.</h2>
-      <p>Sage walks you through values, fears, and preferences — at whatever pace feels right.</p>
+      <span class="section-eyebrow">Integral, not just logistical</span>
+      <h2>Dying well is mind, body, relationships, and spirit &mdash; all four.</h2>
+      <p>Most end-of-life platforms handle paperwork. Quality Death holds the whole arc: values clarified, family prepared, legacy articulated, and existential anxiety met with care that actually works.</p>
     </div>
 
-    <div class="screen-tabs" role="tablist" aria-label="App screens">
-      <button class="tab-btn active" data-screen="welcome_to_sage" role="tab">Welcome to Sage</button>
-      <button class="tab-btn" data-screen="my_care_plan" role="tab">My Care Plan</button>
-      <button class="tab-btn" data-screen="guided_conversation" role="tab">Guided Conversation</button>
-      <button class="tab-btn" data-screen="values_workshop" role="tab">Values Workshop</button>
-      <button class="tab-btn" data-screen="summary_share" role="tab">Summary &amp; Share</button>
-      <button class="tab-btn" data-screen="educational_hub" role="tab">Educational Hub</button>
-      <button class="tab-btn" data-screen="advocate_portal" role="tab">Advocate Portal</button>
-      <button class="tab-btn" data-screen="community_stories" role="tab">Community Stories</button>
+    <div class="integral-grid">
+      <div class="integral-card">
+        <span class="tag mind">Mind</span>
+        <h3>Values &amp; preferences made explicit.</h3>
+        <p>What does "quality of life" mean to you, now, specifically? Reed asks the questions your family can't and turns your answers into a living advance care plan.</p>
+      </div>
+      <div class="integral-card">
+        <span class="tag body">Body</span>
+        <h3>Somatic comfort &amp; symptom honesty.</h3>
+        <p>Pain, nausea, breathlessness, sedation. Reed helps you think clearly about the trade-offs so you can tell your clinicians what you actually want &mdash; not what you think they want to hear.</p>
+      </div>
+      <div class="integral-card">
+        <span class="tag relations">Relationships</span>
+        <h3>Conversations you haven't had.</h3>
+        <p>The apology. The permission. The instruction. The inheritance. The story. Reed helps you choose which conversations to have, with whom, and in what order &mdash; before time decides for you.</p>
+      </div>
+      <div class="integral-card">
+        <span class="tag spirit">Spirit</span>
+        <h3>Existential anxiety, taken seriously.</h3>
+        <p>The fear of dying, the grief of what you're leaving, the questions about meaning. Clinicians are rarely trained for this. Quality Death integrates evidence-based modalities &mdash; including psychedelic-assisted care where it's clinically appropriate and lawfully available &mdash; to meet it head-on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOULA / APP PREVIEW -->
+  <section class="screens-section" id="doula">
+    <div class="section-header">
+      <span class="section-eyebrow">The virtual doula</span>
+      <h2>Reed holds space &mdash; any hour, any question, any season.</h2>
+      <p>Traditional death doulas have been showing up for the dying for centuries &mdash; midwives at the other end of life. Reed carries that practice into a form that's always available, never in a hurry, and never costs you money to begin.</p>
+    </div>
+
+    <div class="screen-tabs" role="tablist" aria-label="Conversation scenes">
+      <button class="tab-btn active" data-scene="first" role="tab">First conversation</button>
+      <button class="tab-btn" data-scene="values" role="tab">Values work</button>
+      <button class="tab-btn" data-scene="family" role="tab">Family prep</button>
+      <button class="tab-btn" data-scene="legacy" role="tab">Legacy</button>
+      <button class="tab-btn" data-scene="anxiety" role="tab">Existential fear</button>
+      <button class="tab-btn" data-scene="psych" role="tab">Psychedelic integration</button>
+      <button class="tab-btn" data-scene="vigil" role="tab">Vigil planning</button>
+      <button class="tab-btn" data-scene="grief" role="tab">After-death</button>
     </div>
 
     <div class="phone-showcase">
       <div class="phone-frame-wrap">
         <div class="phone-frame">
           <div class="phone-notch"></div>
-          <iframe
-            id="screen-frame"
-            src="/screens/welcome_to_sage.html"
-            title="App screen preview"
-            loading="lazy"
-            sandbox="allow-same-origin allow-scripts"
-          ></iframe>
+          <div class="phone-screen" id="phone-screen">
+            <!-- Conversation rendered by JS -->
+          </div>
         </div>
-        <p class="screen-caption" id="screen-caption">Welcome to Sage</p>
+        <p class="screen-caption" id="screen-caption">First conversation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PSYCHEDELIC CARE -->
+  <section class="psych-section" id="psychedelic">
+    <div class="psych-inner">
+      <div class="psych-header">
+        <span class="section-eyebrow">Psychedelic-assisted care</span>
+        <h2>For existential anxiety in terminal illness, the evidence is remarkable.</h2>
+        <p>Two rigorous clinical trials at Johns Hopkins and NYU, with sustained follow-up, showed that a single session of psilocybin-assisted therapy produced substantial and enduring reductions in cancer-related depression and anxiety. That's not a fringe finding. That's 2016 peer-reviewed psychiatry, replicated independently.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <div class="src">Johns Hopkins 2016</div>
+          <div class="stat-num">80%</div>
+          <h3>Clinically significant reductions in depression and anxiety</h3>
+          <p>A single high-dose psilocybin session produced substantial decreases in depressed mood and anxiety, along with increases in quality of life, life meaning, and optimism in patients with life-threatening cancer.</p>
+          <p class="cite">Griffiths et al., <em>J Psychopharmacol</em>, 2016.</p>
+        </div>
+        <div class="evidence-card">
+          <div class="src">NYU Langone 2016</div>
+          <div class="stat-num">60%+</div>
+          <h3>Sustained improvement at 6.5 months</h3>
+          <p>Independent trial replicating the Hopkins findings: psilocybin combined with psychotherapy produced rapid and sustained anxiolytic and antidepressant effects in cancer patients.</p>
+          <p class="cite">Ross et al., <em>J Psychopharmacol</em>, 2016.</p>
+        </div>
+        <div class="evidence-card">
+          <div class="src">NYU Follow-up 2020</div>
+          <div class="stat-num">4.5 yrs</div>
+          <h3>Benefits persisted long-term</h3>
+          <p>Long-term follow-up of the NYU cohort showed that the reductions in anxiety, depression, hopelessness, and demoralization were largely maintained years after a single dosing session.</p>
+          <p class="cite">Agin-Liebes et al., <em>J Psychopharmacol</em>, 2020.</p>
+        </div>
+      </div>
+
+      <div class="co-block">
+        <h3>Colorado is the front seat.</h3>
+        <p>The Natural Medicine Health Act (Proposition 122, 2022) established a regulated framework for psilocybin-assisted therapy in licensed healing centers, with facilitators trained and credentialed under state rules. Colorado healing centers began opening in 2025 &mdash; the first in Denver, and several in Boulder &mdash; and more are coming online through 2026.</p>
+        <p>Quality Death helps you understand whether this path is right for you, prepare for it with a trained clinician, and integrate what you experience into the rest of your care &mdash; before, during, and after a session. Reed is the thread that connects it.</p>
+      </div>
+
+      <div class="disclaimer">
+        <strong>What this is not.</strong> Quality Death does not provide, prescribe, or sell psilocybin or any other psychedelic substance. We do not operate a healing center and we are not a medical practice. We help you think clearly, ask better questions, and find licensed clinicians and regulated healing centers where this care is lawfully available. Outside of licensed settings, possession and use of psilocybin remains restricted under state and federal law.
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section class="features-section" id="features">
-    <div class="section-header" style="max-width:960px; margin: 0 auto 0;">
-      <span class="section-eyebrow">How It Works</span>
-      <h2>Four things Sage does that no one else does.</h2>
+  <section class="features-section">
+    <div class="section-header" style="max-width:720px; margin: 0 auto 0;">
+      <span class="section-eyebrow">How Reed holds the arc</span>
+      <h2>Six practices, one continuous companion.</h2>
+      <p>Not a checklist. A relationship that deepens as the conversation continues.</p>
     </div>
     <div class="features-grid">
 
       <div class="feature-card">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
         </div>
-        <h3>Guided Values Conversation</h3>
-        <p>Sage asks the questions your family can't. What matters most to you? What are you afraid of? What does "quality of life" mean — to <em>you</em>, specifically, right now?</p>
+        <h3>Values conversation</h3>
+        <p>Reed asks the questions your family can't. What matters most. What are you afraid of. What "quality of life" means to you, right now, specifically.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
         </div>
-        <h3>Care Plan Generation</h3>
-        <p>Your values become a structured advance care plan — in plain language your family will actually understand. Not legalese. Not medical jargon. Your words.</p>
+        <h3>Advance care plan</h3>
+        <p>Your values become a structured plan &mdash; in plain language your family will actually understand. Updated as you change. Portable across every state.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
         </div>
-        <h3>Advocate Portal</h3>
-        <p>Share a living summary with your healthcare proxy. They'll know exactly what to do when it matters — and exactly what you would have wanted. No guessing. No guilt.</p>
+        <h3>Family &amp; proxy prep</h3>
+        <p>Your healthcare proxy will know exactly what to do. Reed helps you prepare them for the conversations they'll have with clinicians when you can't.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
         </div>
-        <h3>Community Stories</h3>
-        <p>Learn from people who've been through this. What they wish they'd said. What they're glad they did. Real stories — not statistics — that make the abstract feel possible.</p>
+        <h3>Psychedelic integration support</h3>
+        <p>If you're considering psilocybin-assisted therapy for existential anxiety, Reed helps you prepare questions for a licensed clinician, set intentions before a session, and integrate what surfaces after.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L2 9v11h20V9L12 3zm0 2.5L19 10v2l-7-3.5L5 12v-2l7-4.5zM4 13l8 4 8-4v5H4v-5z"/></svg>
+        </div>
+        <h3>Vigil &amp; ceremony planning</h3>
+        <p>Music, presence, room, ritual. The practical and the spiritual together. What do you want in the last weeks and days? Reed helps you name it and share it.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h3>Legacy work &amp; after-death</h3>
+        <p>Letters, stories, recorded messages, ethical wills. Reed helps you leave what you want to leave &mdash; and helps your people carry grief after you're gone.</p>
       </div>
 
     </div>
@@ -827,191 +684,290 @@
   <!-- HARD TRUTHS -->
   <section class="truths-section" id="truths">
     <div class="truths-inner">
-      <span class="section-eyebrow">Why This Matters</span>
-      <h2>The honest case for <em>having this conversation now.</em></h2>
+      <span class="section-eyebrow">Why this matters</span>
+      <h2>The honest case for <em>doing this work now.</em></h2>
 
       <div class="truth-block">
-        <p>
-          <strong>The ICU is 40x more expensive per day than home care.</strong>
-          It's also where most people don't want to be.
-          And it's where most people who didn't plan end up anyway.
-        </p>
+        <p><strong>An ICU day runs roughly $3,000&ndash;$10,000.</strong> Home-based care, for the same person on the same day, is usually a few hundred. Ten to thirty times cheaper, often better, and almost always closer to what people actually say they want. It's where people who didn't plan end up anyway.</p>
       </div>
 
       <div class="truth-block">
-        <p>
-          <strong>Completing an advance directive is free.</strong>
-          It takes 30 minutes. It works in all 50 states.
-          It is the most important thing you can do for the people you love.
-        </p>
+        <p><strong>Completing an advance directive is free.</strong> It takes 30 minutes. It works in all 50 states. It is among the most consequential things you can do for the people you love.</p>
       </div>
 
       <div class="truth-block">
-        <p>
-          <strong>The conversation itself is the intervention.</strong>
-          Studies show that families who have talked openly about end-of-life wishes
-          report lower grief, lower guilt, and higher satisfaction — regardless of outcome.
-          The document matters. The conversation matters more.
-        </p>
+        <p><strong>The conversation itself is the intervention.</strong> Families who have talked openly about end-of-life wishes report lower grief, lower guilt, and higher satisfaction &mdash; regardless of outcome. The document matters. The conversation matters more.</p>
       </div>
 
       <div class="truth-block">
-        <p>
-          <strong>The US ranks 43rd in quality of death.</strong>
-          Not because we lack technology. Because we lack honesty.
-          Quality Death is the honest conversation the healthcare system won't have with you.
-        </p>
+        <p><strong>Existential suffering is not a minor side plot.</strong> It is the center of the experience for many people facing death. Treating it seriously &mdash; including with emerging modalities backed by peer-reviewed evidence &mdash; is a mark of real care, not a detour from it.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONNECT SECTION -->
+  <!-- CONNECT / THE WEAVE -->
   <section class="connect-section" id="connect">
     <div class="section-header">
-      <span class="section-eyebrow">Connected Care</span>
-      <h2>Quality Death is part of something bigger.</h2>
-      <p>Your plan connects forward — to ongoing care planning, and to caregivers who will actually honor your wishes.</p>
+      <span class="section-eyebrow">The weave</span>
+      <h2>Quality Death is one facet of a larger practice.</h2>
+      <p>Each of these is a door into the same conversation, arriving from a different direction. You enter through whichever one meets you where you are. That&rsquo;s the architecture &mdash; and that&rsquo;s why they exist.</p>
     </div>
+
+    <div class="connect-group-label">Mind &mdash; identity &amp; values</div>
     <div class="connect-inner">
-      <div class="connect-card">
-        <h3>CareGoals — Ongoing Advance Care Planning</h3>
-        <p>
-          Your wishes evolve. CareGoals keeps your advance care plan current —
-          through life changes, health changes, and the conversations you haven't had yet.
-          Connected to your Sage profile.
-        </p>
+      <div class="connect-card mapofyou">
+        <h3>mapofyou &mdash; values that outlive you</h3>
+        <p>Identity mapping that gives the advance-care work its depth. The patterns you name on mapofyou become the legacy conversations you have here. Same self, two surfaces.</p>
+        <a href="https://mapofyou.com" class="btn-outline">Visit mapofyou</a>
+      </div>
+      <div class="connect-card goals">
+        <h3>CareGoals &mdash; the plan, ongoing</h3>
+        <p>Your wishes evolve with you. CareGoals keeps your plan current across every season of life, so the words are already there when time runs short.</p>
         <a href="https://caregoals.com" class="btn-outline">Visit CareGoals</a>
       </div>
-      <div class="connect-card">
-        <h3>co-op.care — Caregivers Who Know Your Wishes</h3>
-        <p>
-          When you're ready for in-home care, co-op.care connects you with worker-owned
-          caregivers trained to honor your advance care plan.
-          Your words. Your wishes. Followed.
-        </p>
+    </div>
+
+    <div class="connect-group-label">Body &mdash; care in place</div>
+    <div class="connect-inner">
+      <div class="connect-card coop">
+        <h3>co-op.care &mdash; caregivers who honor it</h3>
+        <p>When the plan becomes practice, co-op.care connects you with worker-owned caregivers trained to honor your advance directive. Not vendors. Neighbors.</p>
         <a href="https://co-op.care" class="btn-outline">Visit co-op.care</a>
       </div>
+      <div class="connect-card comfort">
+        <h3>ComfortCard &mdash; one wallet, one identity</h3>
+        <p>A single place that carries your plan, your HSA and FSA funds, and emergency access &mdash; so the paperwork doesn&rsquo;t outlive you and the money reaches the care you chose.</p>
+        <a href="https://comfortcard.org" class="btn-outline">Visit ComfortCard</a>
+      </div>
     </div>
+
+    <div class="connect-group-label">Spirit &mdash; threshold companions</div>
+    <div class="connect-inner">
+      <div class="connect-card sh-room">
+        <h3>sh-room &mdash; fungi as kin</h3>
+        <p>Fungi are the oldest companions we have for thresholds. sh-room grows gourmet and adaptogenic mushrooms at home &mdash; lion&rsquo;s mane for clarity, reishi for stillness. An invitation into the kingdom that holds us before and after.</p>
+        <a href="https://sh-room.com" class="btn-outline">Visit sh-room</a>
+      </div>
+      <div class="connect-card psych">
+        <h3>Licensed Colorado clinicians</h3>
+        <p>Where psychedelic-assisted therapy is clinically appropriate and lawfully available, Reed helps you find credentialed facilitators. Care happens there. Preparation and integration happen here.</p>
+        <a href="#sage-input" class="btn-outline" data-prime="How do I find a licensed Colorado psilocybin facilitator and what should I ask?">Ask Reed</a>
+      </div>
+    </div>
+
+    <p style="text-align:center; max-width:640px; margin:48px auto 0; font-size:14.5px; color:var(--text-light); line-height:1.65; font-style:italic;">
+      You don&rsquo;t have to walk all six. Most people walk two or three. The weave is there whether you use it or not &mdash; and that&rsquo;s the point.
+    </p>
   </section>
 
   <!-- FOOTER -->
   <footer style="background:#0d1a14;padding:48px 32px 0;font-family:Inter,sans-serif">
-  <div style="max-width:1200px;margin:0 auto">
-    <div style="background:rgba(13,115,119,0.08);border:1px solid rgba(13,115,119,0.18);border-radius:10px;padding:14px 18px;margin-bottom:36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-      <span style="font-size:13px;color:rgba(255,255,255,0.45)"><strong style="color:#6bd8cb">One login. Every product.</strong> Sign in once to access the full SolvingHealth network.</span>
-      <a href="https://solvinghealth.com/signin" style="background:transparent;border:1px solid rgba(13,115,119,0.4);color:#6bd8cb;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none">Sign In / Register</a>
-    </div>
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-          <div style="width:34px;height:34px;background:linear-gradient(135deg,#0d7377,#1353d8);border-radius:9px"></div>
-          <span style="font-size:17px;font-weight:800;color:white">Solving<span style="color:#6bd8cb">Health</span></span>
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="background:rgba(13,115,119,0.08);border:1px solid rgba(13,115,119,0.18);border-radius:10px;padding:14px 18px;margin-bottom:36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <span style="font-size:13px;color:rgba(255,255,255,0.45)"><strong style="color:#6bd8cb">One login. Every product.</strong> Sign in once to access the full SolvingHealth network.</span>
+        <a href="https://solvinghealth.com/signin" style="background:transparent;border:1px solid rgba(13,115,119,0.4);color:#6bd8cb;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none">Sign in / Register</a>
+      </div>
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <div style="width:34px;height:34px;background:linear-gradient(135deg,#0d7377,#1353d8);border-radius:9px"></div>
+            <span style="font-size:17px;font-weight:800;color:white">Solving<span style="color:#6bd8cb">Health</span></span>
+          </div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.7;max-width:300px">The health system that works for you &mdash; instead of you working for it. AI-native care infrastructure. Boulder, CO.</p>
         </div>
-        <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.7;max-width:280px">The health system that works for you — instead of you working for it. AI-native care infrastructure. Boulder, CO.</p>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">Network</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+            <li><a href="https://solvinghealth.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">SolvingHealth</a></li>
+            <li><a href="https://co-op.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">co-op.care</a></li>
+            <li><a href="https://caregoals.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">CareGoals</a></li>
+            <li><a href="https://altru.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">altru.care</a></li>
+            <li><a href="https://comfortcard.org" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">ComfortCard</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">Resources</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+            <li><a href="https://solvinghealth.com/docs" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">Documentation</a></li>
+            <li><a href="https://solvinghealth.com/mcp" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">MCP connector</a></li>
+            <li><a href="https://solvinghealth.com/security" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">HIPAA &amp; security</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">SolvingHealth Network</div>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
-          <li><a href="https://solvinghealth.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">SolvingHealth</a></li>
-          <li><a href="https://surgeonvalue.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">SurgeonValue</a></li>
-          <li><a href="https://co-op.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">co-op.care</a></li>
-          <li><a href="https://clinicalswipe.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">ClinicalSwipe</a></li>
-          <li><a href="https://comfortcard.org" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">ComfortCard</a></li>
-          <li><a href="https://caregoals.com" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">CareGoals</a></li>
-          <li><a href="https://altru.care" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">altru.care</a></li>
-        </ul>
-      </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px">Resources</div>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
-          <li><a href="https://solvinghealth.com/docs" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">Documentation</a></li>
-          <li><a href="https://solvinghealth.com/mcp" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">MCP Connector</a></li>
-          <li><a href="https://solvinghealth.com/security" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">HIPAA &amp; Security</a></li>
-          <li><a href="https://solvinghealth.com/contact" style="color:rgba(255,255,255,0.48);font-size:13px;text-decoration:none">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.07)">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:18px 0 24px">
-      <span style="font-size:12px;color:rgba(255,255,255,0.28)">© 2026 SolvingHealth LLC · Boulder, CO · HIPAA Compliant</span>
-      <div style="display:flex;gap:16px">
-        <a href="/privacy" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Privacy</a>
-        <a href="/terms" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Terms</a>
-        <a href="/hipaa" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">HIPAA BAA</a>
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.07)">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:18px 0 24px">
+        <span style="font-size:12px;color:rgba(255,255,255,0.28)">&copy; 2026 SolvingHealth LLC &middot; Boulder, CO &middot; HIPAA compliant</span>
+        <div style="display:flex;gap:16px">
+          <a href="/privacy" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Privacy</a>
+          <a href="/terms" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">Terms</a>
+          <a href="/hipaa" style="font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none">HIPAA BAA</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <!-- SAGE PERSISTENT BAR qualitydeath -->
+  <!-- SAGE PERSISTENT BAR -->
   <div class="sage-bar" id="sage-bar">
     <div class="sage-response-bar" id="sage-response"></div>
     <div class="sage-bar-inner">
       <div class="sage-dot"></div>
-      <span class="sage-label">Sage</span>
+      <span class="sage-label">Reed</span>
       <input
         type="text"
         id="sage-input"
         class="sage-input"
-        placeholder="Ask Sage about advance care planning..."
+        placeholder="Ask Reed about dying well, ceremony, or psychedelic-assisted care..."
         autocomplete="off"
-        aria-label="Ask Sage"
+        aria-label="Ask Reed"
       >
       <button class="sage-send" id="sage-send" aria-label="Send">Ask</button>
     </div>
   </div>
 
   <script>
-    // Screen tab switcher
-    const tabs = document.querySelectorAll('.tab-btn');
-    const frame = document.getElementById('screen-frame');
-    const caption = document.getElementById('screen-caption');
-
-    const captions = {
-      welcome_to_sage: 'Welcome to Sage',
-      my_care_plan: 'My Care Plan',
-      guided_conversation: 'Guided Conversation',
-      values_workshop: 'Values Workshop',
-      summary_share: 'Summary & Share',
-      educational_hub: 'Educational Hub',
-      advocate_portal: 'Advocate Portal',
-      community_stories: 'Community Stories'
+    // Conversation scenes — curated static previews for the phone mockup.
+    // Every bubble is hand-written; sage uses italics for reflective beats.
+    const SCENES = {
+      first: {
+        caption: 'First conversation',
+        ctx: 'Starting from wherever you are',
+        bubbles: [
+          ['sage', 'You\u2019re here. That\u2019s already the hardest part. What brought you to this page tonight?'],
+          ['user', 'My oncologist said I should think about a plan.'],
+          ['sage', 'Okay. We can go as slow as you want. I\u2019m not going anywhere. Can I ask what you\u2019re most afraid of right now \u2014 not medically, but <em>really</em>?'],
+          ['user', 'That my family won\u2019t know what I want.'],
+          ['sage', 'Then that\u2019s where we start. We\u2019ll build you a plan they can actually follow \u2014 in your own words.']
+        ]
+      },
+      values: {
+        caption: 'Values work',
+        ctx: 'What \u201cquality of life\u201d means to you',
+        bubbles: [
+          ['sage', 'When you think about a day you\u2019d call <em>good</em> \u2014 even now \u2014 what\u2019s in it?'],
+          ['user', 'Coffee on the porch. My dog. A real conversation with someone I love.'],
+          ['sage', 'Okay. So \u201cquality\u201d for you isn\u2019t an abstract number. It\u2019s those three things being possible.'],
+          ['sage', 'If a treatment kept you alive but took all three away, would that count as adding life \u2014 or taking it?'],
+          ['user', 'Taking it.'],
+          ['sage', 'That\u2019s the kind of sentence your proxy will thank you for later.']
+        ]
+      },
+      family: {
+        caption: 'Family prep',
+        ctx: 'Preparing the people who will carry this',
+        bubbles: [
+          ['sage', 'Who\u2019s your healthcare proxy going to be?'],
+          ['user', 'My daughter, probably. She\u2019s the steady one.'],
+          ['sage', 'Good. The steady one is the right answer. What does she <em>not</em> know about you that she\u2019d need to, if she had to speak for you tomorrow?'],
+          ['user', 'She doesn\u2019t know I\u2019d rather be home than intubated.'],
+          ['sage', 'Let\u2019s draft what you\u2019d want to tell her. I\u2019ll keep it short enough that she can actually remember it under pressure.']
+        ]
+      },
+      legacy: {
+        caption: 'Legacy',
+        ctx: 'What you want to leave, in your own words',
+        bubbles: [
+          ['sage', 'If you could leave each of your people <em>one</em> thing \u2014 not money, a sentence \u2014 what would you leave your daughter?'],
+          ['user', 'I\u2019d want her to know she\u2019s allowed to be happy when I\u2019m gone.'],
+          ['sage', 'Say that again, slower. I\u2019ll write it down exactly.'],
+          ['user', 'She is allowed to be happy when I\u2019m gone.'],
+          ['sage', 'We\u2019ll put that into an ethical will she can read on the day she needs it most.']
+        ]
+      },
+      anxiety: {
+        caption: 'Existential fear',
+        ctx: 'When the fear has nowhere medical to go',
+        bubbles: [
+          ['sage', 'You said earlier you wake up at three a.m. afraid. Can you describe what the fear is <em>made of</em>?'],
+          ['user', 'That I\u2019ll stop existing. That there\u2019s nothing on the other side.'],
+          ['sage', 'That\u2019s existential anxiety \u2014 and it\u2019s one of the most common and least-treated parts of terminal illness. Your oncologist isn\u2019t trained for it. You\u2019re not broken for having it.'],
+          ['sage', 'There are three paths people walk through it: talking with someone trained for it, sitting with a spiritual practice, and \u2014 where it\u2019s clinically appropriate \u2014 psychedelic-assisted therapy. Want to explore any of those?']
+        ]
+      },
+      psych: {
+        caption: 'Psychedelic integration',
+        ctx: 'Preparing for and integrating after a session',
+        bubbles: [
+          ['sage', 'You\u2019ve booked a psilocybin session with a licensed Colorado facilitator. Three weeks out. How are you feeling?'],
+          ['user', 'Nervous. I don\u2019t know what to ask going in.'],
+          ['sage', 'We can work on that together. Before a session, the most useful question isn\u2019t \u201cwhat will I experience?\u201d \u2014 it\u2019s \u201c<em>what would I want to meet?</em>\u201d'],
+          ['user', 'I think I\u2019d want to meet the fear, straight on.'],
+          ['sage', 'Then that\u2019s your intention. Tell your facilitator those exact words. After the session, we\u2019ll integrate what comes up \u2014 slowly, so it actually lands.']
+        ]
+      },
+      vigil: {
+        caption: 'Vigil planning',
+        ctx: 'The last weeks and days, on your terms',
+        bubbles: [
+          ['sage', 'When you picture the last days, who\u2019s in the room?'],
+          ['user', 'My wife. My daughter. My dog. Not a ton of other people.'],
+          ['sage', 'What\u2019s playing?'],
+          ['user', 'Probably Bill Evans. Or nothing. Just the window open.'],
+          ['sage', 'Okay. \u201cQuiet, window open, Bill Evans optional, small circle.\u201d I\u2019ll put that into the vigil plan your hospice team can actually read.']
+        ]
+      },
+      grief: {
+        caption: 'After-death',
+        ctx: 'Support for the people you\u2019re leaving',
+        bubbles: [
+          ['sage', 'Before she reads this, your daughter will need somewhere to put her grief. Want to build her a path?'],
+          ['user', 'Yes. I don\u2019t want her to be alone in it.'],
+          ['sage', 'I\u2019ll gather the things you\u2019ve told me about her \u2014 the ethical will, the recordings, the letter you wrote last Tuesday \u2014 and hold them for her. When she\u2019s ready, she reads them. Not before.'],
+          ['sage', 'And I\u2019ll point her to a grief clinician who specializes in parental loss. <em>You</em> don\u2019t have to be the one to hand her that number.']
+        ]
+      }
     };
 
-    tabs.forEach(tab => {
+    // Render scene into the phone
+    const screen = document.getElementById('phone-screen');
+    const caption = document.getElementById('screen-caption');
+    function renderScene(key) {
+      const scene = SCENES[key] || SCENES.first;
+      caption.textContent = scene.caption;
+      let html = `<div class="ctx">${scene.ctx}</div>`;
+      scene.bubbles.forEach(([who, text]) => {
+        html += `<div class="bubble ${who}">${text}</div>`;
+      });
+      screen.innerHTML = html;
+      screen.scrollTop = 0;
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(tab => {
       tab.addEventListener('click', () => {
-        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        const screen = tab.dataset.screen;
-        frame.src = `/screens/${screen}.html`;
-        caption.textContent = captions[screen] || screen;
+        renderScene(tab.dataset.scene);
       });
     });
 
-    // Sage AI harness
+    // Initial render
+    renderScene('first');
+
+    // Reed bar (unchanged from prior version)
     const input = document.getElementById('sage-input');
     const sendBtn = document.getElementById('sage-send');
     const responseEl = document.getElementById('sage-response');
     let chatHistory = [];
 
-    const keywords = ['death','dying','end of life','advance directive','hospice','palliative','family','wishes','will','dnr','proxy','values','funeral','legacy','care plan','dying well'];
+    const keywords = ['death','dying','end of life','advance directive','hospice','palliative','family','wishes','will','dnr','proxy','values','funeral','legacy','care plan','doula','psychedelic','psilocybin','anxiety','existential','integration','ceremony'];
 
     function localFallback(msg) {
       const lower = msg.toLowerCase();
-      if (keywords.some(k => lower.includes(k))) {
-        return 'That\'s an important topic. Advance care planning helps ensure your wishes are known and honored. Want me to walk you through the key questions?';
+      if (lower.includes('psilocybin') || lower.includes('psychedelic')) {
+        return 'Existential anxiety in serious illness is treatable \u2014 and psilocybin-assisted therapy has strong peer-reviewed evidence for it. In Colorado, licensed healing centers opening in 2026 make this pathway real. I can help you prepare, integrate, or just think out loud about whether it\u2019s right for you.';
       }
-      return 'I\'m Sage — I help you think through advance care planning, end-of-life wishes, and the conversations that matter. What would you like to explore?';
+      if (keywords.some(k => lower.includes(k))) {
+        return 'That\u2019s important. I\u2019m here for as long as you want to talk \u2014 about the plan, the people, or the fear underneath it. Where would you like to start?';
+      }
+      return 'I\u2019m Reed \u2014 a virtual death doula. I hold space for the conversations that come with dying well, including the hard ones. What\u2019s on your mind?';
     }
 
     async function sendMessage() {
       const msg = input.value.trim();
       if (!msg) return;
-
       sendBtn.disabled = true;
       input.value = '';
-      responseEl.textContent = 'Sage is thinking...';
+      responseEl.textContent = 'Reed is listening\u2026';
       responseEl.classList.add('visible');
 
       try {
@@ -1021,7 +977,6 @@
           body: JSON.stringify({ message: msg, site: 'qualitydeath', history: chatHistory }),
           signal: AbortSignal.timeout(10000)
         });
-
         if (res.ok) {
           const data = await res.json();
           const reply = data.response || localFallback(msg);
@@ -1039,20 +994,16 @@
         input.focus();
       }
     }
-
     sendBtn.addEventListener('click', sendMessage);
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
     });
-
-    // Primed CTAs: actually start the conversation instead of dead-anchoring to an empty input
     document.querySelectorAll('[data-prime]').forEach(el => {
       el.addEventListener('click', e => {
         e.preventDefault();
         const prime = el.getAttribute('data-prime') || '';
         input.value = prime;
         input.focus();
-        // Smooth-scroll the Sage bar into view on mobile, then send
         input.scrollIntoView({ behavior: 'smooth', block: 'end' });
         setTimeout(sendMessage, 280);
       });
